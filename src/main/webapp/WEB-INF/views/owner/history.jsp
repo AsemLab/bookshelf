@@ -246,7 +246,8 @@
 			</div>
 		</div>
 	</div>
-
+	<br>
+	<br>
 
 	<!-- Bootstrap scripts   ************************************************* -->
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -255,6 +256,6 @@
 		integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
 		crossorigin="anonymous"></script>
 
-<jsp:include page="/WEB-INF/tags/footerTag.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/tags/footerTag.jsp"></jsp:include>
 </body>
 </html>

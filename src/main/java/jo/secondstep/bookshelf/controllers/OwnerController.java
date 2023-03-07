@@ -49,6 +49,9 @@ public class OwnerController {
 	public String search(@RequestParam(name = "library") Integer id, @RequestParam(name = "name") String name,
 			@RequestParam(name = "filter") String filter, ModelMap map) {
 
+		buys = buyOperationsRepository.getOperationsByLibrary(id);
+		borrows = borrowOperationRepository.getOperationsByLibrary(id);
+		
 		Object[] borrowResult = null;
 		Object[] buyResult = null;
 
@@ -72,6 +75,7 @@ public class OwnerController {
 		map.addAttribute("buy", buyResult);
 
 		map.addAttribute("library_id", id);
+		libraryName = libraryRepository.findById(id).get().getLibrary_name();
 		map.addAttribute("library_name", libraryName);
 
 		return "/owner/history";
