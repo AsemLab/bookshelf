@@ -1,0 +1,237 @@
+INSERT INTO  users( username, password) VALUES ("admin","12345");
+INSERT INTO  users( username, password) VALUES("Mohammad", "1234");
+INSERT INTO  users( username, password) VALUES( "Asem", "1234");
+INSERT INTO  users( username, password) VALUES( "Ahmad", "1234");
+INSERT INTO  users( username, password) VALUES( "Amal", "1234");
+INSERT INTO  users( username, password) VALUES( "Mai", "1234");
+INSERT INTO  users( username, password) VALUES( "Leen", "1234");
+INSERT INTO  users( username, password) VALUES( "Amer", "1234");
+
+
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Mohammed Makhadmeh", "mohammed@gmail.com","0771234567",2);
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Asem Mahmoud", "asem@gmail.com", "0771234589",3);
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Ahmad Darabkeh", "ahmad@gmail.com", "0771234589",4);
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Amal Qazaq", "amal@gmail.com", "0771234589",5);
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Mai Qamaj", "maiqamaj952@gmail.com", "0771234567",6);
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Leen Draghmeh", "leen@gmail.com", "0771234589" ,7);
+INSERT INTO persons(name, email, phone_number, user_id) VALUES ("Amer Sabah" , "amer@gmail.com", "0771234589",8);
+
+
+INSERT INTO  permissions( user_id, role) VALUES (1, "admin");
+INSERT INTO  permissions( user_id, role) VALUES (2, "library_owner");
+INSERT INTO  permissions( user_id, role) VALUES (3, "library_owner");
+INSERT INTO  permissions( user_id, role) VALUES (4, "library_owner");
+INSERT INTO  permissions( user_id, role) VALUES (5, "library_owner");
+INSERT INTO  permissions( user_id, role) VALUES (6, "library_owner");
+INSERT INTO  permissions( user_id, role) VALUES (7, "library_owner");
+INSERT INTO  permissions( user_id, role) VALUES (8, "library_owner");
+
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Reading for All" ,"Amman","",1,"accepted");
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Shoman Public Library" ,"Amman","",2,"accepted");
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Books for every one" ,"Irbid","",3,"accepted");
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Al-Hadaf" ,"Irbid","",4,"accepted");
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Al-Wafa" ,"Irbid","",5,"accepted");
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Al-Wesam" ,"Zarqa","",6,"accepted");
+insert into libraries(library_name,location,description,owner_id,status) Values ( "Janar" ,"Zarqa","",7,"accepted");
+
+insert into categories(category_name) values("Technology");
+insert into categories(category_name) values("Mystery");
+insert into categories(category_name) values("Medical");
+insert into categories(category_name) values("Business");
+insert into categories(category_name) values("Children");
+
+insert into books(book_name,author,price,category_id,description) values("Python Crash Course", "Eric Matthes",21.50, 1, "Second edition of the best-selling Python book in the world. A fast-paced, no-nonsense guide to programming in Python. Updated and thoroughly revised to reflect the latest in Python code and practices.");
+insert into books(book_name,author,price,category_id,description) values("The Summer House","James Patterson", 15.00,2, "When seven murder victims are found in a small town, the homicide investigation shakes a small-town sheriff to her core in James Patterson's tense thriller.");
+insert into books(book_name,author,price,category_id,description) values("Introduction to Algorithms","Thomas H. Cormen", 68.50, 1, "Some topics multithreaded algorithms, dynamic programming.");
+insert into books(book_name,author,price,category_id,description) values("Bright Line Eating","Susan Peirce Thompson", 35.95, 3, "Bright Line Eating has helped thousands of people from over 75 countries lose all their excess weight and keep it off. Are you ready to join them?");
+insert into books(book_name,author,price,category_id,description) values("Little Blue Truck's Halloween", "Alice Schertle", 14.80, 5,"Beep! Beep! It’s Halloween! Little Blue Truck is picking up his animal friends for a costume party. Lift the flaps in this large, sturdy board book to find out who’s dressed up in each costume! Will Blue wear a costume too?");
+insert into books(book_name,author,price,category_id,description) values("The 48 Laws of Power", "Robert Greene" ,22.50, 4, "In the book that People magazine proclaimed “beguiling” and “fascinating,” Robert Greene and Joost Elffers have distilled three thousand years of the history of power into 48 essential laws by drawing from the philosophies of Machiavelli, Sun Tzu, and Carl Von Clausewitz and also from the lives of figures ranging from Henry Kissinger to P.T. Barnum.");
+insert into books(book_name,author,price,category_id,description) values("The Bitcoin Standard", "Saifedean Ammous", 13.90,1, "The Decentralized Alternative to Central Banking");
+insert into books(book_name,author,price,category_id,description) values("Physical Examination and Health Assessment", "Carolyn Jarvis", 33.50, 3, "With an easy-to-follow approach and unmatched learning support, Jarvis’s Physical Examination and Health Assessment, 8th Edition is the most authoritative, complete, and easily implemented solution for health assessment in nursing.");
+insert into books(book_name,author,price,category_id,description) values("Verity", "Colleen Hoover",18.50, 2, null);
+insert into books(book_name,author,price,category_id,description) values("Hands-On Machine Learning" , "Aurélien Géron" , 28.00, 1, "Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems.");
+insert into books(book_name,author,price,category_id,description) values("The Anatomy Coloring Book","Wynn Kapit", 42.00, 3,"A useful tool for anyone with an interest in learning anatomical structures, this concisely written text features precise, extraordinary hand-drawn figures that were crafted especially for easy coloring and interactive study.");
+insert into books(book_name,author,price,category_id,description) values("Our Class is a Family", "Shannon Olsen" ,12.00, 5, "Our Class is a Family is a book that will help build and strengthen that class community. Kids learn that their classroom is a place where it’s safe to be themselves, it’s okay to make mistakes, and it’s important to be a friend to others.");
+insert into books(book_name,author,price,category_id,description) values("The Body Keeps the Score"," Bessel van der Kolk",11.50,3, "Brain, Mind, and Body in the Healing of Trauma");
+insert into books(book_name,author,price,category_id,description) values("Atomic Habits","James Clear", 11.99, 4, "An Easy & Proven Way to Build Good Habits & Break Bad Ones.");
+insert into books(book_name,author,price,category_id,description) values("The Moonlight Child","Karen McQuestion", 18.99, 2, "A gripping and emotional novel that will leave you wondering about the neighbors next door.");
+insert into books(book_name,author,price,category_id,description) values("Long Road to Mercy", "David Baldacci", 9.99, 2, "Atlee Pine, an FBI agent with special skills assigned to the remote wilds of the southwestern United States who must confront a new threat . . . and an old nightmare.");
+insert into books(book_name,author,price,category_id,description) values("My First Learn to Write Workbook", "Crystal Radke", 19.95, 5, "Practice for Kids with Pen Control, Line Tracing, Letters, and More!");
+insert into books(book_name,author,price,category_id,description) values("Rich Dad Poor Dad","Robert T. Kiyosaki", 17.00, 4,"What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!");
+
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 1, 5, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 2, 10, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 3, 0, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 4, 3, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 5, 5, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 6, 10, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 7, 0, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (1, 8, 3, "buy");
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 1, 5, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 5, 12, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 3, 1, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 6, 8, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 17, 5, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 18, 12, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 12, 1, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (2, 13, 8, "buy");
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 5, 3, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 7, 15, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 8, 20, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 5, 1, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 9, 3, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 10, 15, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 11, 20, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (3, 14, 1, "buy");
+
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 1, 8, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 2, 0, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 3, 6, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 4, 14, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 5, 5, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 6, 14, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 7, 2, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 8, 10, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 9, 0, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 10, 0, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 11, 6, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 12, 9, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 13, 8, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 14, 22, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 15, 6, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 16, 14, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 17, 3, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (4, 18, 13, "buy");
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 1, 5, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 2, 0, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 8, 23, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 8, 1, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 18, 5, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 18, 0, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 17, 23, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (5, 17, 1, "borrow");
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 5, 7, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 3, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 3, 12, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 10, 1, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 12, 7, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 12, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 8, 12, "buy");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (6, 8, 1, "borrow");
+
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 1, 20, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 2, 25, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 3, 13, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 4, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 5, 20, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 6, 25, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 7, 13, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 8, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 9, 20, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 10, 25, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 11, 13, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 12, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 13, 20, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 14, 25, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 15, 13, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 16, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 17, 4, "borrow");
+insert into bookshelf.books_in_library(library_id, book_id, quantity, status) values (7, 18, 4, "borrow");
+
+/* ********************************************************************************************* */
+
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(7,1,1,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(4,2,2,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(3,3,5,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(3,3,6,null);
+
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(12,3,9,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(2,4,9,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(7,2,10,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(10,5,13,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(8,3,14,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(5,6,14,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(6,2,14,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(11,7,14,null);
+
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(7,6,19,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(8,4,17,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(1,2,19,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(15,1,21,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(9,3,23,null);
+
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(9,7,48,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(7,3,50,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(11,2,44,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(17,1,44,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(5,6,50,null);
+
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(8,1,56,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(9,2,54,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(11,3,56,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(7,4,52,null);
+
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(10,2,60,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(10,3,59,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(3,4,70,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(21,6,63,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(19,7,65,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(9,7,76,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(7,5,72,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(5,3,61,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(4,3,66,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(8,2,73,null);
+INSERT INTO borrow_operations(number_of_borrow_days,customer_id,book_id,accept) VALUES(14,1,64,null);
+
+
+
+
+
+/* ********************************************************************************************* */
+
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(6 , 17 , 4 , "Greet!!");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(2 , 7, 4 , "helps my to find new job");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(3 , 10 , 4 , "recommended for beginners");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(1, 1 , 5 , "Great Author");          
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(7 , 11 , 5 , "how intersting!!");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(2 , 13 , 3 , "Don't miss it..");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(3 , 8 , 2 , "good for weekend evenings");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(3 , 15 , 3 , "Not suitable for children");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(5, 9 , 5 , "Hoover is my new legend");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(5 , 8 , 3 , "know your body MORE");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(2 , 5 , 3 , "Intresing..");
+insert into bookshelf.book_ratings( customer_id , book_id , rate , feedback) values(4 , 18 , 2 , "useless book..");
+
+
+
+
+
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(1 , 2 , 4 , "highly recomended");
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(3 , 7 , 4 , "in love with the location");
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(1 , 4 , 3 , "categories varitey is good");
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(3 , 2 , 2 , "Bad delievry");
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(4 , 5, 1 , "bad reading area");
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(2 , 2 , 3 , "fits my need");
+insert into bookshelf.library_ratings( customer_id , library_id , rate , feedback) values(5 , 3 , 4 , "good book quality");
+
+
+
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id, book_id) VALUES ( '2021-09-21',1,3);
+INSERT INTO bookshelf.buy_operations ( buy_date, person_id, book_id) VALUES ( '2021-09-21', 2,4);
+INSERT INTO bookshelf.buy_operations ( buy_date, person_id, book_id) VALUES ( '2021-09-15', 1,7);
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id, book_id) VALUES ( '2021-09-16',2,  3);
+INSERT INTO bookshelf.buy_operations ( buy_date, person_id, book_id) VALUES ( '2021-09-04',3,4);
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id, book_id) VALUES ( '2021-09-07', 4,3);
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id, book_id) VALUES ( '2021-09-09',5,18);
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id,book_id) VALUES ( '2021-09-10', 6,  8);
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id,book_id) VALUES ( '2021-09-17',5,12);
+INSERT INTO bookshelf.buy_operations ( buy_date,person_id, book_id) VALUES ( '2021-09-06',1,12);
+INSERT INTO bookshelf.buy_operations ( buy_date,  person_id, book_id) VALUES ( '2021-09-21',1,8);
+INSERT INTO bookshelf.buy_operations ( buy_date, person_id, book_id) VALUES ( '2021-09-21',1,18);
+INSERT INTO bookshelf.buy_operations ( buy_date, person_id, book_id) VALUES ( '2021-09-21',2,18);

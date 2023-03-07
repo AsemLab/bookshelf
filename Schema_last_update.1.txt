@@ -1,0 +1,97 @@
+CREATE TABLE users(
+  user_id INT PRIMARY KEY auto_increment,
+  username VARCHAR(30) NOT NULL,
+  password VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE persons(
+  person_id INT PRIMARY KEY auto_increment,
+  name VARCHAR(30) NOT NULL,
+  email VARCHAR(30) DEFAULT NULL,
+  phone_number VARCHAR(30) DEFAULT NULL,
+  user_id INT DEFAULT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE permissions (
+   id INT PRIMARY KEY auto_increment,
+   user_id INT NOT NULL,
+   role VARCHAR(30) NOT NULL,
+   FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE libraries (
+  library_id INT PRIMARY KEY auto_increment,
+  library_name VARCHAR(30) NOT NULL,
+  location VARCHAR(30) DEFAULT NULL,
+  description VARCHAR(30) DEFAULT NULL,
+  owner_id INT NOT NULL,
+  status VARCHAR(30) DEFAULT NULL,
+  FOREIGN KEY (owner_id) REFERENCES persons (person_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE categories (
+  category_id INT PRIMARY KEY auto_increment,
+  category_name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE books (
+  book_id INT PRIMARY KEY auto_increment,
+  book_name VARCHAR(50) NOT NULL,
+  author VARCHAR(30) DEFAULT NULL,
+  price DOUBLE(6,2) DEFAULT 0.0 ,
+  category_id INT NOT NULL,
+  description VARCHAR(1000) DEFAULT NULL,
+  FOREIGN KEY (category_id) REFERENCES categories(category_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE books_in_library(
+ id INT PRIMARY KEY auto_increment,
+ library_id INT NOT NULL,
+ book_id INT NOT NULL,
+ quantity INT DEFAULT 0,
+ status VARCHAR(30) DEFAULT NULL,
+ FOREIGN KEY (library_id) REFERENCES libraries (library_id) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (book_id) REFERENCES books (book_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE borrow_operations (
+ id INT PRIMARY KEY auto_increment,
+ number_of_borrow_days INT DEFAULT 0,
+ customer_id INT NOT NULL,
+ book_id INT NOT NULL,
+ accept DATE DEFAULT NULL,
+ status VARCHAR(30) DEFAULT NULL,
+ FOREIGN KEY (customer_id) REFERENCES persons (person_id) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (book_id) REFERENCES books_in_library (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE buy_operations (
+ id INT PRIMARY KEY auto_increment,
+ buy_date DATE DEFAULT NULL,
+ person_id INT NOT NULL,
+ book_id INT NOT NULL,
+ FOREIGN KEY (person_id) REFERENCES persons (person_id) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (book_id) REFERENCES books_in_library (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE library_ratings(
+ customer_id INT NOT NULL,
+ library_id INT NOT NULL,
+ rate INT DEFAULT 0,
+ feedback VARCHAR(30) DEFAULT NULL,
+ PRIMARY KEY(customer_id,library_id),
+ FOREIGN KEY (customer_id) REFERENCES persons (person_id) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (library_id) REFERENCES libraries (library_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE book_ratings(
+ customer_id INT NOT NULL,
+ book_id INT NOT NULL,
+ rate INT DEFAULT 0,
+ feedback VARCHAR(30) DEFAULT NULL,
+ PRIMARY KEY(customer_id,book_id),
+ FOREIGN KEY (customer_id) REFERENCES persons (person_id) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (book_id) REFERENCES books (book_id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
